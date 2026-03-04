@@ -67,6 +67,8 @@ public:
     while (sz > 0)
       removeNode(fake->next);
   }
+
+  T &front() { return fake->next->val; }
 };
 
 int main()
