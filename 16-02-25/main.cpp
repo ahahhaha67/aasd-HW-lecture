@@ -73,6 +73,30 @@ public:
 
   void pop_front() { removeNode(fake->next); }
   void pop_back() { removeNode(fake->prev); }
+
+  void print() const
+  {
+    BiList<T> *cur = fake->next;
+    std::cout << "[ ";
+    while (cur != fake)
+    {
+      std::cout << cur->val << " ";
+      cur = cur->next;
+    }
+    std::cout << "]\n";
+  }
+
+  void print_reverse() const
+  {
+    BiList<T> *cur = fake->prev;
+    std::cout << "[ ";
+    while (cur != fake)
+    {
+      std::cout << cur->val << " ";
+      cur = cur->prev;
+    }
+    std::cout << "]\n";
+  }
 };
 
 int main()
