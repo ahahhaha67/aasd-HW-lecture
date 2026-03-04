@@ -45,6 +45,7 @@ public:
 
   ~DoublyLinkedList()
   {
+    clear();
     delete fake;
   }
 
@@ -60,6 +61,12 @@ public:
 
   size_t size() const { return sz; }
   bool empty() const { return sz == 0; }
+
+  void clear()
+  {
+    while (sz > 0)
+      removeNode(fake->next);
+  }
 };
 
 int main()
