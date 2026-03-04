@@ -26,6 +26,14 @@ private:
     ++sz;
   }
 
+  void removeNode(BiList<T> *node)
+  {
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+    delete node;
+    --sz;
+  }
+
 public:
   DoublyLinkedList()
   {
