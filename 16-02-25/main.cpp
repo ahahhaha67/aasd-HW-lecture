@@ -15,6 +15,17 @@ private:
   BiList<T> *fake;
   size_t sz;
 
+  void insertAfter(BiList<T> *pos, const T &value)
+  {
+    BiList<T> *node = new BiList<T>();
+    node->val = value;
+    node->next = pos->next;
+    node->prev = pos;
+    pos->next->prev = node;
+    pos->next = node;
+    ++sz;
+  }
+
 public:
   DoublyLinkedList()
   {
