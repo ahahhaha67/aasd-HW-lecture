@@ -101,4 +101,26 @@ public:
 
 int main()
 {
+  DoublyLinkedList<char> list;
+
+  list.push_back('B');
+  list.push_back('C');
+  list.push_back('D');
+  list.push_front('A');
+  list.print();
+
+  list.print_reverse();
+
+  std::cout << "front: " << list.front() << "\n";
+  std::cout << "back:  " << list.back() << "\n";
+  std::cout << "size:  " << list.size() << "\n";
+
+  list.pop_front();
+  list.pop_back();
+  list.print();
+
+  list.clear();
+  std::cout << "empty: " << list.empty() << "\n";
+
+  return 0;
 }
