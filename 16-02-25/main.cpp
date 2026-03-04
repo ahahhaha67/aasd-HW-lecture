@@ -70,6 +70,9 @@ public:
 
   T &front() { return fake->next->val; }
   T &back() { return fake->prev->val; }
+
+  void pop_front() { removeNode(fake->next); }
+  void pop_back() { removeNode(fake->prev); }
 };
 
 int main()
