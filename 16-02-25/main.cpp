@@ -57,6 +57,9 @@ public:
   {
     insertAfter(fake, value);
   }
+
+  size_t size() const { return sz; }
+  bool empty() const { return sz == 0; }
 };
 
 int main()
