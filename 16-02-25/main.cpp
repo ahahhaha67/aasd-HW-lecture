@@ -47,6 +47,11 @@ public:
   {
     delete fake;
   }
+
+  void push_back(const T &value)
+  {
+    insertAfter(fake->prev, value);
+  }
 };
 
 int main()
