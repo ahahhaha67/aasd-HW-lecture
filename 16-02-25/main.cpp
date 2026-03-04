@@ -52,6 +52,11 @@ public:
   {
     insertAfter(fake->prev, value);
   }
+
+  void push_front(const T &value)
+  {
+    insertAfter(fake, value);
+  }
 };
 
 int main()
