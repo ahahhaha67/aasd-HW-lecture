@@ -69,6 +69,7 @@ public:
   }
 
   T &front() { return fake->next->val; }
+  T &back() { return fake->prev->val; }
 };
 
 int main()
